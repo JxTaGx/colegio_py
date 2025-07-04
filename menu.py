@@ -299,6 +299,15 @@ class Menu:
 
         asistencias_filtradas = []
         if opcion == '1':
+            fechas_disponibles = sorted(list(set(a.get_fecha() for a in self.colegio.asistencias)))
+            if not fechas_disponibles:
+                print("\nInfo - No hay registros de asistencia con fechas para mostrar.")
+                return 
+
+            print("\nFechas con registros de asistencia disponibles:")
+            for fecha in fechas_disponibles:
+                print(f"- {fecha.strftime('%d/%m/%Y')}")
+            # --- Termina el código que debes agregar ---
             fecha_obj = self.solicitar_fecha("Digite la fecha a consultar (dd/mm/yyyy): ")
             asistencias_filtradas = self.colegio.get_asistencias_filtradas('fecha', fecha_obj)
         elif opcion == '2':

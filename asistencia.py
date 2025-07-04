@@ -32,6 +32,9 @@ class Asistencia:
 
     def get_ausentes(self):
         return self.__estudiantes_ausentes
+    
+    def get_listar(self):
+        for 
 
     def mostrar_detalles(self):
         print("\n================ REGISTRO DE ASISTENCIA ================")
