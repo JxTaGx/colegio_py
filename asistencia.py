@@ -8,6 +8,7 @@ class Asistencia:
         self.__grado = grado_obj
         self.__estudiantes_presentes = presentes 
         self.__estudiantes_ausentes = ausentes
+        self.__estado = "Habilitado"
 
     def get_codigo(self):
         return self.__codigo
@@ -32,6 +33,12 @@ class Asistencia:
 
     def get_ausentes(self):
         return self.__estudiantes_ausentes
+    
+    def get_estado(self):
+        return self.__estado
+    
+    def set_estado(self, estado):
+        self.__estado = estado
 
     def mostrar_detalles(self):
         print("\n================ REGISTRO DE ASISTENCIA ================")
